@@ -934,13 +934,17 @@
   }
 
   .nav-item { /*Portafolio*/
-    margin: 32px 0;
+    margin: 100px 0;
     margin-left: 10px;
   }
 
   .nav-item2 { /*About*/
-    margin-top: -33px;
+    margin-top: -70px;
     margin-left: -30px;
+  }
+
+  .nav-item3 {
+    margin-top: 35px;
   }
 
   .nav-link {  /*Mover todos los nav-link a la izquierda*/

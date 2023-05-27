@@ -1,40 +1,36 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form');
 
-    var form = document.querySelector("form");
+  const emailInput = form.querySelector('input[type="email"]');
 
-    var emailInput = form.querySelector('input[type="email"]');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-    var submitButton = form.querySelector("button[type='submit']");
+    if (emailInput.value.toLowerCase() !== emailInput.value) {
+      const errorMessage = document.createElement('div');
+      errorMessage.classList.add('error-message');
 
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
+      const errorMessageContent = document.createElement('div');
+      errorMessageContent.classList.add('error-message-content');
 
-      if (emailInput.value.toLowerCase() !== emailInput.value) {
+      const errorMessageText = document.createElement('span');
+      errorMessageText.classList.add('error-message-text');
+      errorMessageText.textContent = 'Please enter the email in lowercase.';
 
-        var errorMessage = document.createElement("div");
-        errorMessage.classList.add("error-message");
+      const errorMessageClose = document.createElement('span');
+      errorMessageClose.classList.add('error-message-close');
+      errorMessageClose.textContent = 'X';
 
-        var errorMessageContent = document.createElement("div");
-        errorMessageContent.classList.add("error-message-content");
+      errorMessageClose.addEventListener('click', () => {
+        errorMessage.remove();
+      });
 
-        var errorMessageText = document.createElement("span");
-        errorMessageText.classList.add("error-message-text");
-        errorMessageText.textContent = "Please enter the email in lowercase.";
-
-        var errorMessageClose = document.createElement("span");
-        errorMessageClose.classList.add("error-message-close");
-        errorMessageClose.textContent = "X";
-
-        errorMessageClose.addEventListener("click", function() {
-          errorMessage.remove();
-        });
-
-        errorMessageContent.appendChild(errorMessageText);
-        errorMessageContent.appendChild(errorMessageClose);
-        errorMessage.appendChild(errorMessageContent);
-        form.appendChild(errorMessage);
-      } else {
-        form.submit();
-      }
-    });
+      errorMessageContent.appendChild(errorMessageText);
+      errorMessageContent.appendChild(errorMessageClose);
+      errorMessage.appendChild(errorMessageContent);
+      form.appendChild(errorMessage);
+    } else {
+      form.submit();
+    }
   });
+});

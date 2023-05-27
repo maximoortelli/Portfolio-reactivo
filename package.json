@@ -1,14 +1,22 @@
 {
-  "name": "proyecto-pop-up-modal-final---copia",
+  "name": "portfolio-reactivo",
   "version": "1.0.0",
-  "description": "",
+  "description": "<a name=\"readme-top\"></a>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximoortelli/Portfolio-reactivo.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximoortelli/Portfolio-reactivo/issues"
+  },
+  "homepage": "https://github.com/maximoortelli/Portfolio-reactivo#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",

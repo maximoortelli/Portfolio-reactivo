@@ -1331,6 +1331,11 @@ button:disabled {
   .mobile-modal3 { /* APAGAR CARD 4 MOBILE EN ESCRITORIO */
     display: none;
   }
+
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -1874,24 +1879,6 @@ button:disabled {
     margin-bottom: 20px;
   }
 
-  .mobile-seesource03 {
-    width: 136px;
-    height: 48px;
-    left: 9px;
-    bottom: 4px;
-    border: 1px solid #6070ff;
-    border-radius: 8px;
-    background-color: #fff;
-    color: #396df2;
-    text-align: center;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 20px;
-    margin-top: -70px;
-    margin-bottom: 20px;
-    margin-left: 150px;
-  }
-
   .mobile-modal-fader03 {
     margin-top: -89px;
     margin-left: -73px;
@@ -1902,5 +1889,10 @@ button:disabled {
     height: 20px;
     margin-left: 250px;
     margin-top: -90px;
+  }
+
+  .error-message {
+    color: red;
+    margin-top: 5px;
   }
 }
